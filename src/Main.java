@@ -16,31 +16,25 @@ public class Main {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
     }
-
     public static void task2 () {
         System.out.println("Задача 2");
 
-        int iOs = 1;
-        int Android = 1;
-        int date = 2015;
-        int dateTelephone = 2013;
-        boolean dateIOsTelephoneNew = iOs == 0 && dateTelephone >= date;
-        boolean dateIOsTelephoneStar = iOs == 0 && dateTelephone < date;
-        boolean dateAndroidTelephoneNew = Android == 1 && dateTelephone >= date;
-        boolean dateAndroidTelephoneStar = Android == 1 && dateTelephone < date;
-        if (dateIOsTelephoneNew) {
-            System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (dateAndroidTelephoneNew) {
-            System.out.println("Установите версию приложения для Android по ссылке");
-        } else  if (dateIOsTelephoneStar) {
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else if (dateAndroidTelephoneStar) {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        int clientOS = 0;
+        int clientDeviceYear = 2014;
+        if (clientOS == 0) {
+            if (clientDeviceYear < 2015) {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            } else {
+                System.out.println("Установите  версию приложения для iOS по ссылке");
+            }
+        } else {
+            if (clientDeviceYear < 2015) {
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+            } else {
+                System.out.println("Установите  версию приложения для Android по ссылке");
+            }
         }
-
-
     }
-
     public static void task3 () {
         System.out.println("Задача 3");
 
@@ -53,33 +47,30 @@ public class Main {
         {
             System.out.println(+ year + " год не является високосным");
         }
-        
     }
-
     public static void task4 () {
         System.out.println("Задача 4");
 
         int deliveryDistance = 77;
-        if (deliveryDistance <= 20) {
-            System.out.println("Потребуется дней 1");
-        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
-            System.out.println("Потребуется дней 2");
-        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
-            System.out.println("Потребуется дней 3");
-        } else {
-            System.out.println(" Доставки нет");
+        int deliveryDays =1;
+
+        if ( deliveryDistance > 20 ) {
+            deliveryDays++;
         }
+        if ( deliveryDistance > 60 ) {
+            deliveryDays++;
+        }
+        System.out.println("Потребуется дней " + deliveryDays);
 
     }
-
     public static void task5 () {
         System.out.println("Задача 5");
 
         int monthNumber = 1;
         switch (monthNumber) {
+            case 12:
             case 1:
             case 2:
-            case 12:
                 System.out.println("Зимнее время года");
                 break;
             case 3:
@@ -103,3 +94,5 @@ public class Main {
 
     }
 }
+
+
