@@ -75,5 +75,31 @@ public class Main {
     public static void task5 () {
         System.out.println("Задача 5");
 
+        int monthNumber = 1;
+        switch (monthNumber) {
+            case 1:
+            case 2:
+            case 12:
+                System.out.println("Зимнее время года");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Весеннее время года");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Летнее время года");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Осеннее время года");
+                break;
+            default:
+                System.out.println("Такого месяца нет");
+        }
+
     }
 }
